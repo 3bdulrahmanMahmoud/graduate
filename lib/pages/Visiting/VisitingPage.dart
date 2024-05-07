@@ -1,28 +1,28 @@
+import 'dart:ui';
+
+
 import 'package:flutter/material.dart';
 import 'package:incubtor/constant/constant_File.dart';
-import 'package:incubtor/pages/incubtPage.dart';
+import 'package:incubtor/pages/Incubator/incubtPage.dart';
 import 'package:incubtor/widgets/Back_Icon.dart';
 import 'package:incubtor/widgets/customCaseButton.dart';
 import 'package:incubtor/widgets/custom_Field.dart';
 
-class VisitingParent extends StatelessWidget {
-  const VisitingParent({super.key});
+class VistitingPage extends StatelessWidget {
+  const VistitingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double mediaQueryWidth = MediaQuery.of(context).size.width;
-    double mediaQueryHeight = MediaQuery.of(context).size.height;
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 30, left: 30, right: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Sizebox,
               SizedBox(
-                width: mediaQueryWidth * .75,
+                width: 350,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -37,7 +37,7 @@ class VisitingParent extends StatelessWidget {
               ),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
+                width: 330,
                 child: CustomField(
                   text: 'Enter Your Name',
                   icon: Icon(Icons.person),
@@ -45,7 +45,7 @@ class VisitingParent extends StatelessWidget {
               ),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
+                width: 330,
                 child: CustomField(
                   text: 'Enter Your Email',
                   icon: Icon(Icons.email),
@@ -53,7 +53,7 @@ class VisitingParent extends StatelessWidget {
               ),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
+                width: 330,
                 child: CustomField(
                   text: 'Enter Your Phone',
                   icon: Icon(Icons.phone_iphone_rounded),
@@ -62,15 +62,12 @@ class VisitingParent extends StatelessWidget {
               sized,
               Row(
                 children: [
-                  SizedBox(
-                    width: mediaQueryWidth * .3,
-                    child: CustomField(text: 'Code:'),
-                  ),
+                  SizedBox(width: 150, child: CustomField(text: 'Code:')),
                 ],
               ),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
+                width: 330,
                 child: CustomField(
                   text: 'The Time:',
                   icon: Icon(Icons.watch_later_outlined),
@@ -78,24 +75,23 @@ class VisitingParent extends StatelessWidget {
               ),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
-                child: TextField(
-                  decoration: InputDecoration(
-                      hintText: 'comments :',
-                      hintStyle: TextStyle(color: Colors.amber),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          borderSide: BorderSide(color: Colors.black)),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(32),
-                          borderSide: BorderSide(color: Colors.black)),
-                      focusColor: Colors.white),
-                ),
-              ),
+                  width: 330,
+                  height: 100,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      
+                        hintText: 'comments',
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(32),
+                            borderSide: BorderSide(color: Colors.black)),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(32),
+                            borderSide: BorderSide(color: Colors.black)),
+                        focusColor: Colors.white),
+                  )),
               sized,
               SizedBox(
-                width: mediaQueryWidth * .75,
-                height: mediaQueryHeight * .07,
+                width: 330,
                 child: CaseButton(
                     color: color_buttons,
                     textcase: 'Send',

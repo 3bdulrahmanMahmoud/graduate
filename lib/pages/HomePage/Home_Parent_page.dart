@@ -3,10 +3,11 @@
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:incubtor/pages/NotificationParentPage.dart';
-import 'package:incubtor/pages/SearchParentPage.dart';
-import 'package:incubtor/pages/Welcome_parent_Page.dart';
-import 'package:incubtor/pages/profile_Parent_Page.dart';
+import 'package:incubtor/pages/Notification/NotificationParentPage.dart';
+import 'package:incubtor/pages/Profiles/profile_Parent_Page.dart';
+import 'package:incubtor/pages/Welcome/Welcome_parent_Page.dart';
+import 'package:incubtor/pages/search/SearchParentPage.dart';
+
 
 class HomeParentPage extends StatefulWidget {
   const HomeParentPage({super.key});

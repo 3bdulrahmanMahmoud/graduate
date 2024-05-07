@@ -75,10 +75,13 @@ class LoginPage extends StatelessWidget {
             SizedBox(
               width: WidthQuery * .75,
               height: heightQuery * .072,
-              child: CaseButton(
-                  color: Color(0xffE6E6E6),
-                  textcase: 'Nearest Incubator',
-                  TextColor: Color(0xffFF0000)),
+              child: InkWell(
+                onTap: () => Navigator.pushNamed(context, 'sign_in'),
+                child: CaseButton(
+                    color: Color(0xffE6E6E6),
+                    textcase: 'Nearest Incubator',
+                    TextColor: Color(0xffFF0000)),
+              ),
             ),
           ],
         ),

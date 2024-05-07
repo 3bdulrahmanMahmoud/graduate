@@ -16,6 +16,11 @@ class OnboardF extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double WidthQuery = MediaQuery.of(context).size.width;
+    double heightQuery = MediaQuery.of(context).size.height;
+    Widget heightbox = SizedBox(
+      height: heightQuery * .05,
+    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
@@ -28,8 +33,8 @@ class OnboardF extends StatelessWidget {
         ),
         Image.asset(
           '$image',
-          width: 400,
-          height: 500,
+          width: WidthQuery * .9,
+          height: heightQuery * .7,
         ),
         Text(
           text,
@@ -43,8 +48,8 @@ class OnboardF extends StatelessWidget {
               onTap: () =>
                   Navigator.restorablePushReplacementNamed(context, page),
               child: Container(
-                width: 60,
-                height: 60,
+                width: WidthQuery * .16,
+                height: heightQuery * .08,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                     color: const Color(0xffD97706)),

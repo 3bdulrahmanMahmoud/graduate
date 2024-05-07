@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incubtor/constant/constant_File.dart';
+import 'package:incubtor/services/View_file.dart';
 
 class ReportsPage extends StatelessWidget {
   const ReportsPage({super.key});
@@ -21,9 +22,12 @@ class ReportsPage extends StatelessWidget {
                   SizedBox(
                     width: mediaQueryWidth * .33,
                   ),
-                  Text(
-                    'View a file',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  InkWell(
+                    child: Text(
+                      'View a file',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ],
               ),

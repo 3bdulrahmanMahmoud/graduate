@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:incubtor/pages/CasePage.dart';
-import 'package:incubtor/pages/HomePage.dart';
-import 'package:incubtor/pages/Home_Parent_page.dart';
-import 'package:incubtor/pages/Login_Page.dart';
-import 'package:incubtor/pages/VisitingPage.dart';
-import 'package:incubtor/pages/Visiting_Parent_Page.dart';
-import 'package:incubtor/pages/WelcomePage.dart';
-import 'package:incubtor/pages/incubtPage.dart';
-import 'package:incubtor/pages/incuptPage2.dart';
-import 'package:incubtor/pages/onboarding2.dart';
-import 'package:incubtor/pages/onboarding3.dart';
-import 'package:incubtor/pages/personal_profile.dart';
-import 'package:incubtor/pages/reports_page.dart';
-import 'package:incubtor/pages/splash_screen.dart';
-import 'package:incubtor/pages/upload_File.dart';
+import 'package:incubtor/pages/HomePage/Home_Parent_page.dart';
+import 'package:incubtor/pages/HomePage/Home_incabator_Page.dart';
+import 'package:incubtor/pages/Incubator/incubtPage.dart';
+import 'package:incubtor/pages/Incubator/incuptPage2.dart';
+import 'package:incubtor/pages/Login/Login_Page.dart';
+import 'package:incubtor/pages/Login/sign_In_page.dart';
+import 'package:incubtor/pages/OnboardingPage/onboarding2.dart';
+import 'package:incubtor/pages/OnboardingPage/onboarding3.dart';
+import 'package:incubtor/pages/Profiles/personal_profile.dart';
+import 'package:incubtor/pages/ServicesPage/CasePage.dart';
+import 'package:incubtor/pages/ServicesPage/reports_page.dart';
+import 'package:incubtor/pages/ServicesPage/upload_File.dart';
+import 'package:incubtor/pages/Visiting/VisitingPage.dart';
+import 'package:incubtor/pages/Visiting/Visiting_Parent_Page.dart';
+import 'package:incubtor/pages/Welcome/WelcomePage.dart';
+import 'package:incubtor/pages/splash/splash_screen.dart';
 
 void main() {
   runApp(const GradutionProject());
@@ -40,6 +41,7 @@ class GradutionProject extends StatelessWidget {
         'editProfilePage': (context) => const PersonalProfile(),
         'VisitingParent': (context) => VisitingParent(),
         'ReportsPage': (context) => ReportsPage(),
+        'sign_in':(context) => SignINPage(),
       },
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),

@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import 'package:flutter/material.dart';
-import 'package:incubtor/pages/onboarding.dart';
+import 'package:incubtor/pages/OnboardingPage/onboarding.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -22,20 +22,25 @@ class SplashScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             SizedBox(
               height: heightQuery * .25,
-              child: Column(
-                children: [
-                  Image.asset(
-                    'asset/images/photo_2023-11-06_22-48-31 1.png',
-                  ),
-                  const Text(
-                    'My Incubtor',
-                    style: TextStyle(fontSize: 30),
-                  ),
-                ],
+              child: Center(
+                child: Column(
+                  children: [
+                    Image.asset(
+                      'asset/images/photo_2023-11-06_22-48-31 1.png',
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    const Text(
+                      'My Incubtor',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

@@ -1,10 +1,9 @@
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:incubtor/pages/NotificationPage.dart';
-import 'package:incubtor/pages/WelcomePage.dart';
-import 'package:incubtor/pages/profilePage.dart';
-import 'package:incubtor/pages/search_Page.dart';
+import 'package:incubtor/pages/Notification/NotificationPage.dart';
+import 'package:incubtor/pages/Profiles/profilePage.dart';
+import 'package:incubtor/pages/Welcome/WelcomePage.dart';
+import 'package:incubtor/pages/search/search_Page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -14,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int index = 1;
+  int index = 0;
 
   final items = <Widget>[
     Icon(Icons.home),

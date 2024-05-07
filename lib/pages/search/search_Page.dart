@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:incubtor/pages/VisitingPage.dart';
+import 'package:incubtor/pages/Visiting/Visiting_Parent_Page.dart';
 import 'package:incubtor/widgets/custom_Field.dart';
 
-
-class SearchParentPage extends StatelessWidget {
-  const SearchParentPage({super.key});
+class SearchPage extends StatelessWidget {
+  const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
