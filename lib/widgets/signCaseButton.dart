@@ -1,4 +1,6 @@
 
+// ignore_for_file: non_constant_identifier_names, camel_case_types, must_be_immutable, file_names
+
 import 'package:flutter/material.dart';
 
 class signInCaseButton extends StatelessWidget {
@@ -25,7 +27,7 @@ class signInCaseButton extends StatelessWidget {
           border: Border.all(color: Colors.grey)),
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           SizedBox(
@@ -33,7 +35,7 @@ class signInCaseButton extends StatelessWidget {
               height: MediaQuery.of(context).size.height * .05,
               child: Image.asset(image)),
           Text(
-            '$textcase',
+            textcase,
             style: TextStyle(
                 color: TextColor, fontSize: 18, fontWeight: FontWeight.bold),
           ),

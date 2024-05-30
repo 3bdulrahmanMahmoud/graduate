@@ -1,5 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:incubtor/pages/Login/Login_Page.dart';
 import 'package:incubtor/pages/Notification/NotificationPage.dart';
 import 'package:incubtor/pages/Profiles/profilePage.dart';
 import 'package:incubtor/pages/Welcome/WelcomePage.dart';
@@ -32,7 +34,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[index],
+      body:
+    
+      
+       screens[index],
       bottomNavigationBar: CurvedNavigationBar(
           height: 60,
           buttonBackgroundColor: Color(0xffbacF59E0B),

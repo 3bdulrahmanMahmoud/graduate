@@ -16,17 +16,17 @@ class CaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      width: 140,
-      height: 40,
+      width: MediaQuery.of(context).size.width * 0.32,
+      height: MediaQuery.of(context).size.height * 0.07,
       decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(30),
           border: Border.all(color: Colors.grey)),
       child: Text(
-        '$textcase',
+        textcase,
         style: TextStyle(
           color: TextColor,
-          fontSize: 22,
+          fontSize: MediaQuery.of(context).size.width * 0.05,
         ),
       ),
     );

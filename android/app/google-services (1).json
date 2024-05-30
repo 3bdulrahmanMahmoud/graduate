@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "876031526378",
+    "project_id": "graduate-c3945",
+    "storage_bucket": "graduate-c3945.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876031526378:android:287f6b0406c72ae2a25e93",
+        "android_client_info": {
+          "package_name": "com.example.incubtor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ZNjC-w1aHbi9OkGxrkRx9KPykmfo39E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

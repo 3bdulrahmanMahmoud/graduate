@@ -18,9 +18,6 @@ class OnboardF extends StatelessWidget {
   Widget build(BuildContext context) {
     double WidthQuery = MediaQuery.of(context).size.width;
     double heightQuery = MediaQuery.of(context).size.height;
-    Widget heightbox = SizedBox(
-      height: heightQuery * .05,
-    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [

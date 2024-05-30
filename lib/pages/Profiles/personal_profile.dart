@@ -4,7 +4,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:incubtor/constant/constant_File.dart';
 import 'package:incubtor/pages/Incubator/incubtPage.dart';
-import 'package:incubtor/widgets/customCaseButton.dart';
+import 'package:incubtor/widgets/Add_And_delete_case_button.dart';
 import 'package:incubtor/widgets/profile_TextFiled.dart';
 
 class PersonalProfile extends StatefulWidget {
@@ -56,12 +56,18 @@ class _PersonalProfileState extends State<PersonalProfile> {
                     borderRadius: BorderRadius.circular(50),
                     child: image == null
                         ? IconButton(
-                            icon: Image.asset('asset/images/profileImage.png'),
+                            icon: Image.asset(
+                              'asset/images/profileImage.png',
+                              fit: BoxFit.contain,
+                            ),
                             onPressed: () {
                               uploadImage();
                             },
                           )
-                        : Image.file(image!)
+                        : Image.file(
+                            image!,
+                            fit: BoxFit.cover,
+                          )
 
                     //
                     ),
@@ -112,5 +118,3 @@ class _PersonalProfileState extends State<PersonalProfile> {
     );
   }
 }
-
-

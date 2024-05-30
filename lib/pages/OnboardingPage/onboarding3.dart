@@ -14,8 +14,8 @@ class onBoarding3 extends StatelessWidget {
         child: OnboardF(
           page: 'loginPage',
           frame: 'asset/images/Group 151 (1).png',
-          image: 'asset/images/Group 37169.png',
-          text: 'Get advice only from a doctor you believe in.',
+          image: 'asset/images/Mask group.png',
+          text: 'What are you waiting for, protect your child with my incubator',
         ),
       ),
     );
