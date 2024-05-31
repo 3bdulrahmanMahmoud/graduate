@@ -35,7 +35,8 @@ class OnboardF extends StatelessWidget {
         ),
         Text(
           text,
-          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              fontSize: WidthQuery * .05, fontWeight: FontWeight.bold),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

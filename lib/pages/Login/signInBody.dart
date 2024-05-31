@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:incubtor/constant/constant_File.dart';
@@ -26,8 +25,7 @@ class LoginBody extends StatelessWidget {
               const BackButton(),
               const Text(
                 'login as parents',
-                style:
-                    TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -57,7 +55,7 @@ class LoginBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: MediaQuery.sizeOf(context).height * .03,
           ),
 
           const Row(
@@ -65,13 +63,12 @@ class LoginBody extends StatelessWidget {
             children: [
               Text(
                 'Forgot password',
-                style:
-                    TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
             ],
           ),
           SizedBox(
-            height: 10,
+            height: MediaQuery.sizeOf(context).height * .06,
           ),
 
           SizedBox(
@@ -117,7 +114,7 @@ class LoginBody extends StatelessWidget {
           Row(
             children: [
               SizedBox(
-                width: 150,
+                width: MediaQuery.of(context).size.width * .35,
                 child: line,
               ),
               Padding(
@@ -128,18 +125,18 @@ class LoginBody extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 150,
+                width: MediaQuery.of(context).size.width * .35,
                 child: line,
               ),
             ],
           ),
           SizedBox(
-            height: 10,
+            height: MediaQuery.sizeOf(context).height * .08,
           ),
 
           SizedBox(
             width: 350,
-            height: 50,
+            height: MediaQuery.sizeOf(context).height * .1,
             child: InkWell(
               child: signInCaseButton(
                   color: color_buttons,
@@ -154,7 +151,7 @@ class LoginBody extends StatelessWidget {
 
           SizedBox(
             width: 200,
-            height: 20,
+            height: MediaQuery.sizeOf(context).height * .1,
             child: signInCaseButton(
                 color: color_buttons,
                 textcase: "Sign in with Facebook",

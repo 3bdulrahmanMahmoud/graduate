@@ -1,8 +1,9 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:incubtor/pages/OnboardingPage/onboarding.dart';
-import 'package:incubtor/pages/Visiting/VisitingPage.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -37,7 +38,7 @@ class SplashScreen extends StatelessWidget {
               ),
               
              
-               Text(
+              const Text(
                 'My Incubtor',
                 style: TextStyle(fontSize: 30,color: Colors.white),textAlign: TextAlign.center,
                            ),
@@ -45,8 +46,8 @@ class SplashScreen extends StatelessWidget {
           ),
         ),
       ),
-      nextScreen: OnBoarding(),
-      backgroundColor: Color(0xffF59E0B),
+      nextScreen: const OnBoarding(),
+      backgroundColor: const Color(0xffF59E0B),
       splashIconSize: MediaQuery.of(context).size.height,
     );
   }

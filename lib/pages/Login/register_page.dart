@@ -59,9 +59,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                  const  BackButton(),
+                    const BackButton(),
                     Sizebox2,
-                 const   Text(
+                    const Text(
                       'Sign Up',
                       style:
                           TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -107,16 +107,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   ),
                 ),
                 sized,
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Forgot password',
-                      style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+
                 heightSize,
                 SizedBox(
                   width: WidthQuery * .8,
@@ -147,16 +138,17 @@ class _RegisterPageState extends State<RegisterPage> {
                         });
                       },
                     ),
-                    const Text(
-                      'you have already an account \?',
-                      style: TextStyle(fontSize: 17),
+                    Text(
+                      'you have already an account \?  ',
+                      style: TextStyle(
+                          fontSize: MediaQuery.sizeOf(context).width * .04),
                     ),
                     InkWell(
                       onTap: () => Navigator.pop(context),
                       child: Text(
                         'Sign in',
                         style: TextStyle(
-                            fontSize: 17,
+                            fontSize: MediaQuery.sizeOf(context).width * .05,
                             color: color_buttons,
                             fontWeight: FontWeight.bold),
                       ),

@@ -1,10 +1,11 @@
 // ignore_for_file: non_constant_identifier_names
 
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:incubtor/cubit/User_cubit.dart';
 import 'package:incubtor/pages/Login/signInBody.dart';
-
 
 TextEditingController SignInEmail = TextEditingController();
 TextEditingController SignInpassword = TextEditingController();
@@ -37,7 +38,6 @@ class SigninView extends StatelessWidget {
         );
       },
     );
-    
   }
 }
 
