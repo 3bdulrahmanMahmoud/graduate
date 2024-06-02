@@ -1,17 +1,19 @@
+// ignore_for_file: file_names
+
 class SignUpModel {
   final String status;
-  final dataModel data;
+  final DataModel data;
 
   SignUpModel({required this.status, required this.data});
   factory SignUpModel.fromJson(Map<String, dynamic> jsonData) {
     return SignUpModel(
       status: jsonData['status'],
-      data: jsonData['data'],
+      data: DataModel.fromJson(jsonData['data']),
     );
   }
 }
 
-class dataModel {
+class DataModel {
   final String firstName;
   final String lastName;
   final String email;
@@ -22,7 +24,7 @@ class dataModel {
   final String token;
   final num v;
 
-  dataModel(
+  DataModel(
       {required this.firstName,
       required this.lastName,
       required this.email,
@@ -32,8 +34,8 @@ class dataModel {
       required this.id,
       required this.token,
       required this.v});
-  factory dataModel.fromJson(Map<String, dynamic> jsondata) {
-    return dataModel(
+  factory DataModel.fromJson(Map<String, dynamic> jsondata) {
+    return DataModel(
         firstName: jsondata['user']['firstName'],
         lastName: jsondata['user']['lastName'],
         email: jsondata['user']['email'],

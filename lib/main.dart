@@ -20,11 +20,13 @@ import 'package:incubtor/pages/ServicesPage/upload_File.dart';
 import 'package:incubtor/pages/Visiting/VisitingPage.dart';
 import 'package:incubtor/pages/Visiting/Visiting_Parent_Page.dart';
 import 'package:incubtor/pages/Welcome/WelcomePage.dart';
+import 'package:incubtor/pages/search/SearchParentPage.dart';
 import 'package:incubtor/pages/splash/splash_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized;
+  WidgetsFlutterBinding.ensureInitialized();
   casheHelper().init();
+  
   runApp(const GradutionProject());
 }
 
@@ -53,9 +55,10 @@ class GradutionProject extends StatelessWidget {
           'ReportsPage': (context) => ReportsPage(),
           'sign_in': (context) => SigninView(),
           'register': (context) => RegisterPage(),
+          "search_parent_page":(context) => SearchParentPage(),
         },
         debugShowCheckedModeBanner: false,
-        home: const SplashScreen(),
+        home:  SplashScreen(),
       ),
     );
   }

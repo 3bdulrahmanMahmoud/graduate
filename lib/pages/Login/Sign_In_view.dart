@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:incubtor/cubit/User_cubit.dart';
@@ -23,7 +21,7 @@ class SigninView extends StatelessWidget {
               content: Text('success'),
             ),
           );
-          Navigator.pushNamed(context, 'homeParentPage');
+          Navigator.pushReplacementNamed(context, 'homeParentPage');
         } else if (state is SignInFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(

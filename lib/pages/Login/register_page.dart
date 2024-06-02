@@ -39,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
             SnackBar(
               content: Text(state.message),
             ),
-          );
+          );Navigator.pushNamed(context, 'homeParentPage');
         } else if (state is SignInFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(

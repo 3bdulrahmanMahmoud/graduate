@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
               width: WidthQuery * .75,
               height: heightQuery * .072,
               child: InkWell(
-                onTap: () => Navigator.pushNamed(context, 'homeParentPage'),
+                onTap: () => Navigator.pushReplacementNamed(context, 'sign_in'),
                 child: CaseButton(
                     color: color_buttons,
                     textcase: 'login as parent',
@@ -76,7 +76,7 @@ class LoginPage extends StatelessWidget {
               width: WidthQuery * .75,
               height: heightQuery * .072,
               child: InkWell(
-                onTap: () => Navigator.pushNamed(context, 'sign_in'),
+                onTap: () => Navigator.pushNamed(context, 'search_parent_page'),
                 child: CaseButton(
                     color: Color(0xffE6E6E6),
                     textcase: 'Nearest Incubator',

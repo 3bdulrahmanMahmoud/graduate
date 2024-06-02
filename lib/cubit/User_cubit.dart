@@ -25,7 +25,12 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController lastName = TextEditingController();
 
   SignInModel? user;
-  signUp({required String email,required String password,required String firstName,required String lastName,}) async {
+  signUp({
+    required String email,
+    required String password,
+    required String firstName,
+    required String lastName,
+  }) async {
     try {
       emit(SignInLoading());
       final respose = await api.post(
