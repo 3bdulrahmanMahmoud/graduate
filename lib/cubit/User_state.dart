@@ -30,3 +30,14 @@ final class SignUpFailuer extends LoginState {
 
   SignUpFailuer({required this.errMessage});
 }
+
+
+final class SignoutInitial extends LoginState {}
+
+final class SignOutSuccess extends LoginState {}
+final class SignOutLoading extends LoginState {}
+final class SignOutFailuer extends LoginState {
+  final String errMessage;
+
+  SignOutFailuer({required this.errMessage});
+}

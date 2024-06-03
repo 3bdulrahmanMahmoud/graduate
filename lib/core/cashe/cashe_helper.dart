@@ -33,12 +33,12 @@ class casheHelper {
   Future<bool> removeData({required String key}) async {
     return await sharedPreferences.remove(key);
   }
-   Future<bool> containsKey({required String key}) async {
+
+  Future<bool> containsKey({required String key}) async {
     return await sharedPreferences.containsKey(key);
   }
 
   Future<bool> clearData({required String key}) async {
     return await sharedPreferences.clear();
   }
-
 }

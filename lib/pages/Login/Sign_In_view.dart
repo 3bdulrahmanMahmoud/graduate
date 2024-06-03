@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:incubtor/core/cashe/cashe_helper.dart';
 import 'package:incubtor/cubit/User_cubit.dart';
 import 'package:incubtor/pages/Login/signInBody.dart';
 
@@ -16,11 +17,13 @@ class SigninView extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is SignInSuccess) {
+          casheHelper().saveData(key: "isLogin", value: true);
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text('success'),
             ),
           );
+
           Navigator.pushReplacementNamed(context, 'homeParentPage');
         } else if (state is SignInFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -31,7 +34,7 @@ class SigninView extends StatelessWidget {
         }
       },
       builder: (context, state) {
-        return const Scaffold(
+        return  Scaffold(
           body: LoginBody(),
         );
       },

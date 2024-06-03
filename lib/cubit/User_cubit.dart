@@ -24,6 +24,19 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController FirstName = TextEditingController();
   TextEditingController lastName = TextEditingController();
 
+  Signout() async {
+    try {
+      emit(SignoutInitial());
+      casheHelper().removeData(key: "isLogin");
+      casheHelper().removeData(key: ApiKey.token);
+      casheHelper().removeData(key: ApiKey.id);
+
+      emit(SignOutSuccess());
+    } on Exception catch (e) {
+      emit(SignOutFailuer(errMessage: e.toString()));
+    }
+  }
+
   SignInModel? user;
   signUp({
     required String email,

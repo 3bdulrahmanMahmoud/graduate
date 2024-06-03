@@ -7,11 +7,18 @@ import 'package:incubtor/widgets/Login_Field.dart';
 import 'package:incubtor/widgets/Add_And_delete_case_button.dart';
 import 'package:incubtor/widgets/signCaseButton.dart';
 
-class LoginBody extends StatelessWidget {
-  const LoginBody({
+class LoginBody extends StatefulWidget {
+  LoginBody({
     super.key,
   });
 
+  @override
+  State<LoginBody> createState() => _LoginBodyState();
+}
+
+bool _showPassword = false;
+
+class _LoginBodyState extends State<LoginBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,7 +29,14 @@ class LoginBody extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const BackButton(),
+              IconButton(
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, "loginPage");
+                  },
+                  icon:const Icon(
+                    Icons.arrow_back,
+                    size: 22,
+                  )),
               const Text(
                 'login as parents',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -30,8 +44,8 @@ class LoginBody extends StatelessWidget {
             ],
           ),
 
-          SizedBox(
-            height: 20,
+           SizedBox(
+            height: MediaQuery.sizeOf(context).height*.07,
           ),
 
           SizedBox(
@@ -43,15 +57,26 @@ class LoginBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: MediaQuery.sizeOf(context).height*.07,
           ),
 
-          SizedBox(
-            width: 200,
-            child: LOgInField(
-              mycontroler: SignInpassword,
-              icon: const Icon(Icons.lock),
-              text: 'Password',
+          TextField(
+            controller: SignInpassword,
+            obscureText: !_showPassword,
+            decoration: InputDecoration(
+              hintText: "Password",
+              prefixIcon: Icon(Icons.lock),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(32),
+                  borderSide: const BorderSide(color: Colors.black)),
+              suffixIcon: IconButton(
+                  icon: Icon(
+                      _showPassword ? Icons.visibility : Icons.visibility_off),
+                  onPressed: () {
+                    setState(() {
+                      _showPassword = !_showPassword;
+                    });
+                  }),
             ),
           ),
           SizedBox(
@@ -136,7 +161,7 @@ class LoginBody extends StatelessWidget {
 
           SizedBox(
             width: 350,
-            height: MediaQuery.sizeOf(context).height * .1,
+            height: MediaQuery.sizeOf(context).height * .08,
             child: InkWell(
               child: signInCaseButton(
                   color: color_buttons,

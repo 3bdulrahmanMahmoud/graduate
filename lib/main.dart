@@ -22,6 +22,7 @@ import 'package:incubtor/pages/Visiting/Visiting_Parent_Page.dart';
 import 'package:incubtor/pages/Welcome/WelcomePage.dart';
 import 'package:incubtor/pages/search/SearchParentPage.dart';
 import 'package:incubtor/pages/splash/splash_screen.dart';
+import 'package:incubtor/services/check_View.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,9 +57,10 @@ class GradutionProject extends StatelessWidget {
           'sign_in': (context) => SigninView(),
           'register': (context) => RegisterPage(),
           "search_parent_page":(context) => SearchParentPage(),
+          'splashScreen':(context) => SplashScreen()
         },
         debugShowCheckedModeBanner: false,
-        home:  SplashScreen(),
+        home:const  Auth(),
       ),
     );
   }
