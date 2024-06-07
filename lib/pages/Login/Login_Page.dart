@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
               height: heightQuery * .054,
             ),
             InkWell(
-              onTap: () => Navigator.pushNamed(context, 'homePage'),
+              onTap: () => Navigator.pushNamed(context, 'SignInIncubtor'),
               child: SizedBox(
                 width: WidthQuery * .75,
                 height: heightQuery * .072,

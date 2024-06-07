@@ -11,6 +11,7 @@ import 'package:incubtor/pages/Incubator/incuptPage2.dart';
 import 'package:incubtor/pages/Login/Login_Page.dart';
 import 'package:incubtor/pages/Login/Sign_In_view.dart';
 import 'package:incubtor/pages/Login/register_page.dart';
+import 'package:incubtor/pages/Login/sign_In_Incubtor.dart';
 import 'package:incubtor/pages/OnboardingPage/onboarding2.dart';
 import 'package:incubtor/pages/OnboardingPage/onboarding3.dart';
 import 'package:incubtor/pages/Profiles/personal_profile.dart';
@@ -57,7 +58,8 @@ class GradutionProject extends StatelessWidget {
           'sign_in': (context) => SigninView(),
           'register': (context) => RegisterPage(),
           "search_parent_page":(context) => SearchParentPage(),
-          'splashScreen':(context) => SplashScreen()
+          'splashScreen':(context) => SplashScreen(),
+          "SignInIncubtor":(context) => SignInIncubtor(),
         },
         debugShowCheckedModeBanner: false,
         home:const  Auth(),

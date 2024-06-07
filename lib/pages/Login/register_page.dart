@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:incubtor/constant/constant_File.dart';
+import 'package:incubtor/core/cashe/cashe_helper.dart';
 import 'package:incubtor/cubit/User_cubit.dart';
 import 'package:incubtor/pages/Incubator/incubtPage.dart';
 import 'package:incubtor/pages/Visiting/VisitingPage.dart';
@@ -35,11 +36,13 @@ class _RegisterPageState extends State<RegisterPage> {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is SignUpSuccess) {
+          casheHelper().saveData(key: "isLogin", value: true);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.message),
             ),
-          );Navigator.pushNamed(context, 'homeParentPage');
+          );
+          Navigator.pushNamed(context, 'homeParentPage');
         } else if (state is SignInFailuer) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -52,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
         return Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(22.0),
+              padding: EdgeInsets.all(22.0),
               child: Column(children: [
                 heightSize,
                 //the back icon and login text
@@ -61,7 +64,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   children: [
                     const BackButton(),
                     Sizebox2,
-                    const Text(
+                    Text(
                       'Sign Up',
                       style:
                           TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -109,23 +112,25 @@ class _RegisterPageState extends State<RegisterPage> {
                 sized,
 
                 heightSize,
-                SizedBox(
-                  width: WidthQuery * .8,
-                  height: heightQuery * .06,
-                  child: InkWell(
-                    onTap: () {
-                      context.read<LoginCubit>().signUp(
-                          email: emailSignUp.text,
-                          firstName: FirstName.text,
-                          lastName: lastName.text,
-                          password: passwordSignUp.text);
-                    },
-                    child: CaseButton(
-                        color: color_buttons,
-                        textcase: "Sign up",
-                        TextColor: Colors.white),
-                  ),
-                ),
+                state is SignUpLoading
+                    ? CircularProgressIndicator()
+                    : SizedBox(
+                        width: WidthQuery * .8,
+                        height: heightQuery * .06,
+                        child: InkWell(
+                          onTap: () {
+                            context.read<LoginCubit>().signUp(
+                                email: emailSignUp.text,
+                                firstName: FirstName.text,
+                                lastName: lastName.text,
+                                password: passwordSignUp.text);
+                          },
+                          child: CaseButton(
+                              color: color_buttons,
+                              textcase: "Sign up",
+                              TextColor: Colors.white),
+                        ),
+                      ),
                 sized,
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -139,7 +144,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                     ),
                     Text(
-                      'you have already an account \?  ',
+                      'you have already an account ?  ',
                       style: TextStyle(
                           fontSize: MediaQuery.sizeOf(context).width * .04),
                     ),

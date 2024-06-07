@@ -33,7 +33,7 @@ class _LoginBodyState extends State<LoginBody> {
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, "loginPage");
                   },
-                  icon:const Icon(
+                  icon: const Icon(
                     Icons.arrow_back,
                     size: 22,
                   )),
@@ -44,8 +44,8 @@ class _LoginBodyState extends State<LoginBody> {
             ],
           ),
 
-           SizedBox(
-            height: MediaQuery.sizeOf(context).height*.07,
+          SizedBox(
+            height: MediaQuery.sizeOf(context).height * .07,
           ),
 
           SizedBox(
@@ -57,7 +57,7 @@ class _LoginBodyState extends State<LoginBody> {
             ),
           ),
           SizedBox(
-            height: MediaQuery.sizeOf(context).height*.07,
+            height: MediaQuery.sizeOf(context).height * .07,
           ),
 
           TextField(
@@ -161,7 +161,7 @@ class _LoginBodyState extends State<LoginBody> {
 
           SizedBox(
             width: 350,
-            height: MediaQuery.sizeOf(context).height * .08,
+            height: MediaQuery.sizeOf(context).height * .07,
             child: InkWell(
               child: signInCaseButton(
                   color: color_buttons,
@@ -176,7 +176,7 @@ class _LoginBodyState extends State<LoginBody> {
 
           SizedBox(
             width: 200,
-            height: MediaQuery.sizeOf(context).height * .1,
+            height: MediaQuery.sizeOf(context).height * .07,
             child: signInCaseButton(
                 color: color_buttons,
                 textcase: "Sign in with Facebook",
